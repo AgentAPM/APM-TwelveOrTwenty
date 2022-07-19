@@ -19,25 +19,25 @@
         <item name="android:background">@drawable/outline_rounded</item>
     </style>
 
-    <style name="board_square">
+    <style name="board_square" parent="Widget.AppCompat.Button">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
         <item name="layout_constraintDimensionRatio">1</item>
 
         <item name="android:background">@color/main_color</item>
-        <item name="fontFamily">"@font/digit_font"</item>
+        <item name="fontFamily">"@font/title_font"</item>
         <item name="android:textColor">@color/background_color</item>
-        <item name="android:textSize">56sp</item>
+        <item name="android:textSize">52sp</item>
     </style>
 
-    <style name="incoming_square">
+    <style name="incoming_square" parent="Widget.AppCompat.Button">
         <item name="android:layout_width">@dimen/incoming_square_width</item>
         <item name="android:layout_height">@dimen/incoming_square_width</item>
 
         <item name="android:background">@color/main_color</item>
-        <item name="fontFamily">"@font/digit_font"</item>
+        <item name="fontFamily">"@font/title_font"</item>
         <item name="android:textColor">@color/background_color</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">32sp</item>
     </style>
 
     <style name="font16main">
