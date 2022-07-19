@@ -248,6 +248,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square01"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(0)}"
 
@@ -259,6 +260,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square02"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(1)}"
 
@@ -270,6 +272,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square05"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(4)}"
 
@@ -281,6 +284,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square06"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(5)}"
 
@@ -336,6 +340,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square03"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(2)}"
 
@@ -347,6 +352,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square04"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(3)}"
 
@@ -358,6 +364,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square07"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(6)}"
 
@@ -369,6 +376,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square08"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(7)}"
 
@@ -422,6 +430,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square09"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(8)}"
 
@@ -433,6 +442,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square10"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(9)}"
 
@@ -444,6 +454,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square13"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(12)}"
 
@@ -455,6 +466,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square14"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(13)}"
 
@@ -508,6 +520,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square11"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(10)}"
 
@@ -519,6 +532,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square12"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(11)}"
 
@@ -530,6 +544,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square15"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(14)}"
 
@@ -541,6 +556,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/square16"
                     style="@style/board_square"
+                    android:fontFamily="@font/title_font"
 
                     android:onClick="@{()->viewModel.onClickTile(15)}"
 
@@ -614,6 +630,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/incoming1"
                 style="@style/incoming_square"
+                android:fontFamily="@font/title_font"
 
                 android:background="@color/accent_color"
 
@@ -627,6 +644,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/incoming2"
                 style="@style/incoming_square"
+                android:fontFamily="@font/title_font"
 
                 android:onClick="@{()->viewModel.onClickTile(-2)}" />
 
@@ -637,6 +655,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/incoming3"
                 style="@style/incoming_square"
+                android:fontFamily="@font/title_font"
 
                 android:onClick="@{()->viewModel.onClickTile(-3)}" />
 
@@ -647,6 +666,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/incoming4"
                 style="@style/incoming_square"
+                android:fontFamily="@font/title_font"
 
                 android:onClick="@{()->viewModel.onClickTile(-4)}" />
 
@@ -657,6 +677,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/incoming5"
                 style="@style/incoming_square"
+                android:fontFamily="@font/title_font"
 
                 android:onClick="@{()->viewModel.onClickTile(-5)}" />
 
@@ -667,6 +688,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/incoming6"
                 style="@style/incoming_square"
+                android:fontFamily="@font/title_font"
 
                 android:onClick="@{()->viewModel.onClickTile(-6)}" />
         </LinearLayout>
