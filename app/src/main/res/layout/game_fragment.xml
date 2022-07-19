@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.twelveortwenty.GameViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@color/background_color">
+
+        <TextView
+            android:id="@+id/pointsCount"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/digit_font"
+            android:textColor="@color/main_color"
+            android:textSize="40sp"
+
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:text="@{Integer.toString(viewModel.pointsLD)}"
+            tools:text="0" />
+        <TextView
+            android:id="@+id/incrementDisplay"
+            style="@style/font24accent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/pointsCount"
+            app:layout_constraintStart_toEndOf="@id/pointsCount"
+
+            android:text="@{viewModel.incrementLD}"
+            tools:text = "+4"/>
+
+
+        <TextView
+            android:id="@+id/sum_col1"
+            style="@style/font16main"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toTopOf="@id/board"
+            app:layout_constraintLeft_toLeftOf="@id/board"
+            app:layout_constraintRight_toRightOf="@id/board"
+            app:layout_constraintHorizontal_bias="0.09"
+            android:layout_marginLeft="@dimen/box_border_padding"
+            android:layout_marginRight="@dimen/box_border_padding"
+            android:layout_marginBottom="8dp"
+
+            tools:text="0"
+            />
+        <TextView
+            android:id="@+id/sum_col2"
+            style="@style/font16main"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toTopOf="@id/board"
+            app:layout_constraintLeft_toLeftOf="@id/board"
+            app:layout_constraintRight_toRightOf="@id/board"
+            app:layout_constraintHorizontal_bias="0.35"
+            android:layout_marginLeft="@dimen/box_border_padding"
+            android:layout_marginRight="@dimen/box_border_padding"
+            android:layout_marginBottom="8dp"
+
+            tools:text="0"
+            />
+        <TextView
+            android:id="@+id/sum_col3"
+            style="@style/font16main"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toTopOf="@id/board"
+            app:layout_constraintLeft_toLeftOf="@id/board"
+            app:layout_constraintRight_toRightOf="@id/board"
+            app:layout_constraintHorizontal_bias="0.67"
+            android:layout_marginLeft="@dimen/box_border_padding"
+            android:layout_marginRight="@dimen/box_border_padding"
+            android:layout_marginBottom="8dp"
+
+            tools:text="0"
+            />
+        <TextView
+            android:id="@+id/sum_col4"
+            style="@style/font16main"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toTopOf="@id/board"
+            app:layout_constraintLeft_toLeftOf="@id/board"
+            app:layout_constraintRight_toRightOf="@id/board"
+            app:layout_constraintHorizontal_bias="0.925"
+            android:layout_marginLeft="@dimen/box_border_padding"
+            android:layout_marginRight="@dimen/box_border_padding"
+            android:layout_marginBottom="8dp"
+
+            tools:text="0"
+            />
+        <TextView
+            android:id="@+id/sum_row1"
+            style="@style/font16main"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toEndOf="@id/board"
+            app:layout_constraintTop_toTopOf="@id/board"
+            app:layout_constraintBottom_toBottomOf="@id/board"
+            app:layout_constraintVertical_bias="0.08"
+            android:layout_marginTop="@dimen/box_border_padding"
+            android:layout_marginBottom="@dimen/box_border_padding"
+            android:layout_marginStart="4dp"
+
+            tools:text="0"
+            />
+        <TextView
+            android:id="@+id/sum_row2"
+            style="@style/font16main"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toEndOf="@id/board"
+            app:layout_constraintTop_toTopOf="@id/board"
+            app:layout_constraintBottom_toBottomOf="@id/board"
+            app:layout_constraintVertical_bias="0.34"
+            android:layout_marginTop="@dimen/box_border_padding"
+            android:layout_marginBottom="@dimen/box_border_padding"
+            android:layout_marginStart="4dp"
+
+            tools:text="0"
+            />
+        <TextView
+            android:id="@+id/sum_row3"
+            style="@style/font16main"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toEndOf="@id/board"
+            app:layout_constraintTop_toTopOf="@id/board"
+            app:layout_constraintBottom_toBottomOf="@id/board"
+            app:layout_constraintVertical_bias="0.67"
+            android:layout_marginTop="@dimen/box_border_padding"
+            android:layout_marginBottom="@dimen/box_border_padding"
+            android:layout_marginStart="4dp"
+
+            tools:text="0"
+            />
+        <TextView
+            android:id="@+id/sum_row4"
+            style="@style/font16main"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toEndOf="@id/board"
+            app:layout_constraintTop_toTopOf="@id/board"
+            app:layout_constraintBottom_toBottomOf="@id/board"
+            app:layout_constraintVertical_bias="0.93"
+            android:layout_marginTop="@dimen/box_border_padding"
+            android:layout_marginBottom="@dimen/box_border_padding"
+            android:layout_marginStart="4dp"
+
+            tools:text="0"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/board"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1"
+
+            app:layout_constraintBottom_toTopOf="@+id/incoming"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="24dp">
+
+            <View
+                android:id="@+id/center0"
+                android:layout_width="@dimen/board_gap_width"
+                android:layout_height="@dimen/board_gap_width"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/box_top_left"
+                style="@style/board_box"
+
+                app:layout_constraintBottom_toTopOf="@id/center0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/center0"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/sum_top_left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintDimensionRatio="1"
+                    android:textAlignment="center"
+                    android:padding="4sp"
+
+                    android:background="@drawable/solid_rounded"
+                    android:backgroundTint="@color/background_color"
+
+                    android:fontFamily="@font/digit_font"
+                    android:textColor="@color/main_color"
+
+                    android:textSize="16sp"
+                    android:translationZ="32dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:text="0" />
+
+                <View
+                    android:id="@+id/center1"
+                    android:layout_width="@dimen/box_gap_width"
+                    android:layout_height="@dimen/box_gap_width"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square01"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(0)}"
+
+                    app:layout_constraintBottom_toTopOf="@id/center1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/center1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square02"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(1)}"
+
+                    app:layout_constraintBottom_toTopOf="@id/center1"
+                    app:layout_constraintLeft_toRightOf="@id/center1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square05"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(4)}"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/center1"
+                    app:layout_constraintTop_toBottomOf="@id/center1" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square06"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(5)}"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/center1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/center1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/box_top_right"
+                style="@style/board_box"
+
+                app:layout_constraintBottom_toTopOf="@id/center0"
+                app:layout_constraintLeft_toRightOf="@id/center0"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/sum_top_right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintDimensionRatio="1"
+                    android:textAlignment="center"
+                    android:padding="4sp"
+
+                    android:background="@drawable/solid_rounded"
+                    android:backgroundTint="@color/background_color"
+
+                    android:fontFamily="@font/digit_font"
+                    android:textColor="@color/main_color"
+
+
+                    android:textSize="16sp"
+                    android:translationZ="32dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:text="0" />
+
+                <View
+                    android:id="@+id/center2"
+                    android:layout_width="@dimen/box_gap_width"
+                    android:layout_height="@dimen/box_gap_width"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square03"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(2)}"
+
+                    app:layout_constraintBottom_toTopOf="@id/center2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/center2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square04"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(3)}"
+
+                    app:layout_constraintBottom_toTopOf="@id/center2"
+                    app:layout_constraintLeft_toRightOf="@id/center2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square07"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(6)}"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/center2"
+                    app:layout_constraintTop_toBottomOf="@id/center2" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square08"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(7)}"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/center2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/center2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/box_bottom_left"
+                style="@style/board_box"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/center0"
+                app:layout_constraintTop_toBottomOf="@id/center0">
+
+                <TextView
+                    android:id="@+id/sum_bottom_left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintDimensionRatio="1"
+                    android:textAlignment="center"
+                    android:padding="4sp"
+
+                    android:background="@drawable/solid_rounded"
+                    android:backgroundTint="@color/background_color"
+
+                    android:fontFamily="@font/digit_font"
+                    android:textColor="@color/main_color"
+
+                    android:textSize="16sp"
+                    android:translationZ="32dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:text="0" />
+
+                <View
+                    android:id="@+id/center3"
+                    android:layout_width="@dimen/box_gap_width"
+                    android:layout_height="@dimen/box_gap_width"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square09"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(8)}"
+
+                    app:layout_constraintBottom_toTopOf="@id/center3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/center3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square10"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(9)}"
+
+                    app:layout_constraintBottom_toTopOf="@id/center3"
+                    app:layout_constraintLeft_toRightOf="@id/center3"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square13"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(12)}"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/center3"
+                    app:layout_constraintTop_toBottomOf="@id/center3" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square14"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(13)}"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/center3"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/center3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/box_bottom_right"
+                style="@style/board_box"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/center0"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/center0">
+
+                <TextView
+                    android:id="@+id/sum_bottom_right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintDimensionRatio="1"
+                    android:textAlignment="center"
+                    android:padding="4sp"
+
+                    android:background="@drawable/solid_rounded"
+                    android:backgroundTint="@color/background_color"
+
+                    android:fontFamily="@font/digit_font"
+                    android:textColor="@color/main_color"
+
+                    android:textSize="16sp"
+                    android:translationZ="32dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:text="0" />
+
+                <View
+                    android:id="@+id/center4"
+                    android:layout_width="@dimen/box_gap_width"
+                    android:layout_height="@dimen/box_gap_width"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square11"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(10)}"
+
+                    app:layout_constraintBottom_toTopOf="@id/center4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/center4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square12"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(11)}"
+
+                    app:layout_constraintBottom_toTopOf="@id/center4"
+                    app:layout_constraintLeft_toRightOf="@id/center4"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square15"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(14)}"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/center4"
+                    app:layout_constraintTop_toBottomOf="@id/center4" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/square16"
+                    style="@style/board_square"
+
+                    android:onClick="@{()->viewModel.onClickTile(15)}"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/center4"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/center4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/comboLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/board"
+            app:layout_constraintBottom_toTopOf="@id/incoming">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+
+                android:src="@drawable/icon_star"
+                app:tint="@color/accent_color"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:text="@{Integer.toString(viewModel.selectedTileCountLD)}"
+                tools:text="8"
+
+                android:fontFamily="@font/digit_font"
+                android:textSize="24sp"
+                android:textColor="@color/accent_color"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" links combo"
+
+                android:fontFamily="@font/digit_font"
+                android:textSize="24sp"
+                android:textColor="@color/accent_color"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+
+                android:src="@drawable/icon_star"
+                app:tint="@color/accent_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/incoming"
+            style="@style/board_box"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+
+            android:gravity="clip_horizontal|center_horizontal|fill_horizontal"
+            android:orientation="horizontal"
+            android:padding="@dimen/box_border_padding"
+            app:backgroundTint="@color/main_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/incoming1"
+                style="@style/incoming_square"
+
+                android:background="@color/accent_color"
+
+                android:onClick="@{()->viewModel.onClickTile(-1)}"
+                android:textColor="@color/main_color" />
+
+            <View
+                android:layout_width="@dimen/incoming_gap_width"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/incoming2"
+                style="@style/incoming_square"
+
+                android:onClick="@{()->viewModel.onClickTile(-2)}" />
+
+            <View
+                android:layout_width="@dimen/incoming_gap_width"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/incoming3"
+                style="@style/incoming_square"
+
+                android:onClick="@{()->viewModel.onClickTile(-3)}" />
+
+            <View
+                android:layout_width="@dimen/incoming_gap_width"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/incoming4"
+                style="@style/incoming_square"
+
+                android:onClick="@{()->viewModel.onClickTile(-4)}" />
+
+            <View
+                android:layout_width="@dimen/incoming_gap_width"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/incoming5"
+                style="@style/incoming_square"
+
+                android:onClick="@{()->viewModel.onClickTile(-5)}" />
+
+            <View
+                android:layout_width="@dimen/incoming_gap_width"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/incoming6"
+                style="@style/incoming_square"
+
+                android:onClick="@{()->viewModel.onClickTile(-6)}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gameOverBar"
+            android:visibility="gone"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:translationZ="64dp">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/box_border_radius"
+                android:background="@color/main_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:background="@color/background_color"
+
+                android:minHeight="256dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/digit_font"
+                    android:text="Game Over"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/main_color"
+                    android:textSize="56sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/newBest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+
+                    app:layout_constraintBottom_toTopOf="@id/incoming"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/board">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="8dp"
+
+                        android:src="@drawable/icon_star"
+                        app:tint="@color/accent_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/digit_font"
+
+                        android:text=" new best "
+                        android:textColor="@color/accent_color"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+
+                        android:src="@drawable/icon_star"
+                        app:tint="@color/accent_color" />
+                </LinearLayout>
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/font16main"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:text="score: "
+                            android:textAlignment="textEnd" />
+
+                        <TextView
+                            style="@style/font16main"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="@{Integer.toString(viewModel.pointsLD)}"
+                            tools:text="100" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/font16main"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:text="best: "
+                            android:textAlignment="textEnd" />
+
+                        <TextView
+                            style="@style/font16main"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="@{Integer.toString(viewModel.highScoreLD)}"
+                            tools:text="100" />
+                    </TableRow>
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+
+                        android:visibility="gone"
+
+                        android:background="@drawable/outline_rounded"
+                        android:fontFamily="@font/digit_font"
+                        android:padding="@dimen/box_border_padding"
+
+                        android:onClick="@{()->viewModel.onClickReturn()}"
+
+                        android:text="Return"
+                        android:textColor="@color/main_color"
+
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+
+                        android:background="@drawable/outline_rounded"
+                        android:fontFamily="@font/digit_font"
+                        android:padding="@dimen/box_border_padding"
+
+                        android:onClick="@{()->viewModel.onClickTryAgain()}"
+
+                        android:text="Try again"
+                        android:textColor="@color/main_color"
+
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/box_border_radius"
+                android:background="@color/main_color"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

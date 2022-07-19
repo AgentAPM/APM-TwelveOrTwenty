@@ -1,0 +1,64 @@
+<resources>
+
+    <style name="MainTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor">@color/accent_color</item>
+
+    </style>
+
+    <style name="board_box">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <!--item name="layout_constraintDimensionRatio">1</item-->
+
+        <!--item name="android:paddingLeft">@dimen/box_border_radius</item>
+        <item name="android:paddingRight">@dimen/box_border_radius</item>
+        <item name="android:paddingBottom">@dimen/box_border_radius</item>
+        <item name="android:paddingTop">@dimen/box_border_radius</item-->
+        <item name="android:padding">@dimen/box_border_padding</item>
+
+        <item name="android:background">@drawable/outline_rounded</item>
+    </style>
+
+    <style name="board_square">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="layout_constraintDimensionRatio">1</item>
+
+        <item name="android:background">@color/main_color</item>
+        <item name="fontFamily">"@font/digit_font"</item>
+        <item name="android:textColor">@color/background_color</item>
+        <item name="android:textSize">56sp</item>
+    </style>
+
+    <style name="incoming_square">
+        <item name="android:layout_width">@dimen/incoming_square_width</item>
+        <item name="android:layout_height">@dimen/incoming_square_width</item>
+
+        <item name="android:background">@color/main_color</item>
+        <item name="fontFamily">"@font/digit_font"</item>
+        <item name="android:textColor">@color/background_color</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="font16main">
+        <item name="fontFamily">"@font/digit_font"</item>
+        <item name="android:textColor">@color/main_color</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="font24main">
+        <item name="fontFamily">"@font/digit_font"</item>
+        <item name="android:textColor">@color/main_color</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="font16accent">
+        <item name="fontFamily">"@font/digit_font"</item>
+        <item name="android:textColor">@color/accent_color</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="font24accent">
+        <item name="fontFamily">"@font/digit_font"</item>
+        <item name="android:textColor">@color/accent_color</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="box_border_radius">8dp</dimen>
+    <dimen name="box_border_padding">12dp</dimen>
+    <dimen name="box_gap_width">4dp</dimen>
+    <dimen name="board_gap_width">4dp</dimen>
+    <dimen name="incoming_square_width">48dp</dimen>
+    <dimen name="incoming_gap_width">4dp</dimen>
+</resources>
